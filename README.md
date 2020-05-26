@@ -86,3 +86,5 @@ Schemas were added to organize the database.
 ## Mining & Extraction
 
   Part of the mining process is determining if the data you are using is suitable. Is the data structured? Structured data has columns and rows such as in Excel, CSV or a text file. “The less ETL (extraction, transformation and loading) an organization has to do before analysis, the faster it can start generating insights” (IDG Communications, Inc., 2020). The Northwind data set is structured, allowing us to move to the next step. 
+  
+ ![data analysis](https://user-images.githubusercontent.com/54143493/82938320-3c3fb280-9f57-11ea-8289-dbaaafc7c681.png)
