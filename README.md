@@ -93,8 +93,8 @@ Data was extracted from PostgreSQL using the following query.
  > D.category_name, D.description
  > FROM "Orders".orders A
  > 	LEFT JOIN "Orders".order_details B ON B.order_id = A.order_id
-	> 	 LEFT JOIN "Orders".products C  on C.product_id = B.product_id
- > 			LEFT JOIN "Orders".categories D on D.category_id = C.category_id
+ > 	  LEFT JOIN "Orders".products C  on C.product_id = B.product_id
+ > 	    LEFT JOIN "Orders".categories D on D.category_id = C.category_id
  > ORDER BY ship_country ASC
 ```
   
