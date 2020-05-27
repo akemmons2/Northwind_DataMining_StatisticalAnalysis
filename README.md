@@ -88,7 +88,7 @@ Data was extracted from PostgreSQL using the following query.
 ```SQL
  > SELECT A.order_id, A.order_date, A.shipped_date, A.freight, A.ship_name, 
  > A.ship_country, B.unit_price, B.quantity, B.discount, 
- > C.unit_price as unit_cost, C.quantity_per_unit as cost_quanitity, 
+ > C.unit_price as unit_cost, C.quantity_per_unit as cost_quantity, 
  > C.product_id, C.product_name, C.supplier_id, C.category_id, 
  > D.category_name, D.description
  > FROM "Orders".orders A
