@@ -83,6 +83,20 @@ Schemas were added to organize the database.
 
 ## Mining & Extraction
 
+Data was extracted from PostgreSQL using the following query. 
+
+```SQL
+ > SELECT A.order_id, A.order_date, A.shipped_date, A.freight, A.ship_name, 
+ > A.ship_country, B.unit_price, B.quantity, B.discount, 
+ > C.unit_price as unit_cost, C.quantity_per_unit as cost_quanitity, 
+ > C.product_id, C.product_name, C.supplier_id, C.category_id, 
+ > D.category_name, D.description
+ > FROM "Orders".orders A
+ > 	LEFT JOIN "Orders".order_details B ON B.order_id = A.order_id
+	> 	 LEFT JOIN "Orders".products C  on C.product_id = B.product_id
+ > 			LEFT JOIN "Orders".categories D on D.category_id = C.category_id
+ > ORDER BY ship_country ASC
+```
   
  ![data analysis](https://user-images.githubusercontent.com/54143493/82938320-3c3fb280-9f57-11ea-8289-dbaaafc7c681.png)
 
