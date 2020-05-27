@@ -98,5 +98,4 @@ Data was extracted from PostgreSQL using the following query.
  > ORDER BY ship_country ASC
 ```
   
- ![data analysis](https://user-images.githubusercontent.com/54143493/82938320-3c3fb280-9f57-11ea-8289-dbaaafc7c681.png)
 
