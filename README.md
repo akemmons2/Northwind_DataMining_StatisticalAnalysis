@@ -20,8 +20,6 @@
 ```
 Schemas were added to organize the database. 
 
-![Schemas](https://user-images.githubusercontent.com/54143493/82932115-8b80e580-9f4d-11ea-98b8-024947435fd2.png)
-
  ### Orders
  ```SQL
  >-- SCHEMA: Orders
@@ -69,8 +67,6 @@ Schemas were added to organize the database.
 ```
 ### Fact and Dimension Tables
 
-![fact and dimension table](https://user-images.githubusercontent.com/54143493/82932212-ace1d180-9f4d-11ea-910d-2f383a0234c6.png)
-
 ```SQL
  >SELECT
  >  nspname AS schemaname, relname, rultuples
@@ -97,7 +93,12 @@ Data was extracted from PostgreSQL using the following query.
  > 	    LEFT JOIN "Orders".categories D on D.category_id = C.category_id
  > ORDER BY ship_country ASC
 ```
-While calculations could have been done in SQL in order to demonstrate some Excel competitencies, columns were added to the csv spreadsheet and calculated using formulas.
+Calculations were performed in Excel, demonstrating Excel proficiency.
+
+The following columns were added: products_per_order, cost_per_UOM, sale_price (unit_price * quantity), total_salesprice (sale_price - discount), total_cost, profit_loss (total_salesprice - total_cost) and calculations were performed using formulas.
+
+
+
 
 
 
