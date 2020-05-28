@@ -83,7 +83,7 @@ Schemas were added to organize the database.
 
 ## Mining & Extraction
 
-Data was extracted from PostgreSQL using the following query. 
+Data was extracted from PostgreSQL using the following query.
 
 ```SQL
  > SELECT A.order_id, A.order_date, A.shipped_date, A.freight, A.ship_name, 
@@ -97,5 +97,7 @@ Data was extracted from PostgreSQL using the following query.
  > 	    LEFT JOIN "Orders".categories D on D.category_id = C.category_id
  > ORDER BY ship_country ASC
 ```
-  
+While calculations could have been done in SQL in order to demonstrate some Excel competitencies, columns were added to the csv spreadsheet and calculated using formulas.
+
+
 
