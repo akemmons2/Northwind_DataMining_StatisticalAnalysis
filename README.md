@@ -97,8 +97,37 @@ Calculations were performed in Excel, demonstrating Excel proficiency.
 
 The following columns were added: products_per_order, cost_per_UOM, sale_price (unit_price * quantity), total_salesprice (sale_price - discount), total_cost, profit_loss (total_salesprice - total_cost) and calculations were performed using formulas.
 
+## Association Analysis
 
-
+```SQL
+ > library("Northwind_SalesDetail_revised.csv)
+ > read.csv("Northwind_SalesDetail_revised.csv")
+ > library("Northwind_SalesDetail_revised.csv)
+ > read.table
+ > read.table("Northwind_SalesDetail_revised.csv)
+ > read.csv("Northwind_SalesDetail_revised.csv")
+ > data<- read.table("Northwind_SalesDetail_revised.csv)
+ > data<- read.table("Northwind_SalesDetail_revised.csv)
+ > data<- read.csv("Northwind_SalesDetail_revised.csv")
+ > str(data)
+ > head(data)
+ > tail(data)
+ > summary(data)
+ > for ( i in 1:ncol(data))
+ > {
+ > data[,i]=as.factor(data[,i])
+ > }
+ > library(arules)
+ > basket_rules <- apriori(data, parameter = list(sup = 0.005, conf = 0.01)
+ > summary(basket_rules)
+ > (bas
+ > summary(basket_rules)
+ > inspect(basket_rules)
+ > inspect(head(sort( basket_rules,by="lift"),20))
+ > library(arulesViz)
+ > plot(basket_rules)
+ > q()
+```
 
 
 
