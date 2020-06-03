@@ -97,7 +97,34 @@ Calculations were performed in Excel, demonstrating Excel proficiency.
 
 The following columns were added: products_per_order, cost_per_UOM, sale_price (unit_price * quantity), total_salesprice (sale_price - discount), total_cost, profit_loss (total_salesprice - total_cost) and calculations were performed using formulas.
 
-## Association Analysis
+## SAS Studio - Statistical Analysis
+### Classification
+
+### Product Category by Profit/Loss and Year
+```SQL
+> title "Product Category Profit/Loss by Year";
+> proc sgplot data=work.import noborder nocycleattrs;
+>  hbarbasic ship_country / response=profit_loss stat=mean;
+>  hbarbasic ship_country / response=profit_loss stat=mean group=category_name
+>          groupdisplay=cluster dataskin=matte;
+>  xaxis display=(nolabel noline);
+>  yaxis display=(noline) grid;
+>run;
+```
+### Country by Quantity and Year
+```SQL
+> title "Products Sold by Country";
+> proc sgplot data=work.import1 noborder nocycleattrs;
+>   hbarbasic category_name / response=quantity;
+>   hbarbasic category_name /response=quantity group=order_date
+>           groupdisplay=cluster dataskin=matte;
+>   xaxis display=(nolabel noline);
+>   yaxis display=(noline) grid;
+> run;
+```
+
+## R Studio - Statistical Analysis
+### Association Analysis
 
 ```SQL
  > library("Northwind_SalesDetail_revised.csv)
